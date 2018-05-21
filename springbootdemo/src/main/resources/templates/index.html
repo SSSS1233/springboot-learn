@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <script th:src="@{/JS/jquery.js}"></script>
+    <!--<script th:src="@{/JS/bootstrap.min.js}"></script>-->
+    <script th:src="@{/JS/avalon.js}"></script>
+    <script th:src="@{/JS/myscript.js}"></script>
+   <!-- <script th:src="@{/css/bootstrap.min.css}"></script>-->
+    <script th:src="@{/JS/ajax.js}"></script>
+    //thymeleaf
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ms-controller="viewmodel">
+<form method="post" action="add.do">
+    <input type="text" name="name" id="name">
+    <input type="text" name="password">
+    <input type="submit" value="GO">
+    <table>
+        <tr ms-for="el in @datalist">
+            <td>{{el.name}}</td>
+            <td>{{el.password}}</td>
+        </tr>
+        <tr>
+            <td><a id="up" href="javascript:void(0)">上一页</a></td>
+            <td><a id="down" href="javascript:void(0)">下一页</a></td>
+        </tr>
+        <tr>
+            <td th:text="${demo}">text</td>
+            <td th:text="${session.name}">name</td>
+        </tr>
+    </table>
+    <table>
+        <tr th:each="c:${list}">
+            <td th:text="${c.name}"></td>
+            <td th:text="${c.password}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
