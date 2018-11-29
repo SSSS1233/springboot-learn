@@ -4,9 +4,9 @@ server:
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://127.0.0.1:3306/ssm01
+        url: jdbc:mysql://127.0.0.1:3306/sys
         username: root
-        password: root
+        password: 904428391
         driver-class-name: com.mysql.jdbc.Driver
         filters: stat
         maxActive: 20

@@ -1,5 +1,7 @@
 package com.subing.po;
 
+
+
 public class User {
     private Integer id;
 
